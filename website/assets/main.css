@@ -1,8 +1,8 @@
 :root{
     color-scheme: light dark;
     /*backgrounds*/
-    --primary-bg: light-dark(white, rgb(29, 30, 30));
-    --secondary-bg: light-dark(rgb(230, 230, 230), rgb(36, 38, 38));
+    --primary-bg: light-dark(white, #1e1d1d);
+    --secondary-bg: light-dark(#e6e6e6, #252727);
     /*text*/
     --text-color: light-dark(black, white);
     
@@ -13,7 +13,7 @@
     /*secondary accent*/
     --san-marino: #4470ad;
     --floral-blue: #99afd7;
-    --secondary-accent: light-dark(var(--san-marino),var(--floral-blue))
+    --secondary-accent: light-dark(var(--san-marino),var(--floral-blue));
     /*tertiary-accent*/
     --soft-navy: #6888be;
 }
@@ -41,7 +41,7 @@ p{
 .navBar li{
     margin: 0;
     padding: 10px, 0;
-    border-right: 5px solid var(--primary-accent);
+    border-right: 5px solid var(--secondary-accent);
 }
 
 .navBar li img{
@@ -49,24 +49,29 @@ p{
     margin: 5px;
     width: 50px;
     border-radius: 5px;
+    vertical-align: middle;
 }
 
 .navBar li h1{
     display: inline-block;
-    padding: 5px;
+    margin: 2px 10px 2px 0;
+    vertical-align: middle;
+}
+
+.navBar li a{
+
 }
 
 footer{
-font-size: 0.6rem;
-color: rgba(0, 0, 0, 0.5);
-display: flex;
-justify-content: space-between;
 position: fixed;
 bottom: 0;
 left: 0;
-border-radius: 5px 5px 5px 0;
+border-radius: 0px 5px 0px 0;
 backdrop-filter: blur(6px);
 -webkit-backdrop-filter: blur(6px);
-transform: scale(80%);
-transform-origin: left bottom;
+}
+
+footer p{
+    margin: 2px 2px 2px 10px;
+    font-size: 0.7rem;
 }

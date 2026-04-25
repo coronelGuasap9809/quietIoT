@@ -1,15 +1,72 @@
+:root{
+    color-scheme: light dark;
+    /*backgrounds*/
+    --primary-bg: light-dark(white, rgb(29, 30, 30));
+    --secondary-bg: light-dark(rgb(230, 230, 230), rgb(36, 38, 38));
+    /*text*/
+    --text-color: light-dark(black, white);
+    
+    /*primary accent*/
+    --catalina: #233c67;
+    --st-louis: #ccdbee;
+    --primary-accent: light-dark(var(--catalina),var(--st-louis));
+    /*secondary accent*/
+    --san-marino: #4470ad;
+    --floral-blue: #99afd7;
+    --secondary-accent: light-dark(var(--san-marino),var(--floral-blue))
+    /*tertiary-accent*/
+    --soft-navy: #6888be;
+}
+
 body{
-    background-color: #faf9f6;
+    color: var(--text-color);
+    background-color: var(--primary-bg);
     font-family: "Be Vietnam Pro", sans-serif;
+    margin: 0;
 }
 
 p{
     font-family: "Inter";
 }
 
-.titleBar{
+.navBar{
     position: sticky;
-    top: 0;
+    margin: 0;
     display: flex;
-    
+    padding: 0;
+    background-color: var(--secondary-bg);
+    list-style-type: none;
+}
+
+.navBar li{
+    margin: 0;
+    padding: 10px, 0;
+    border-right: 5px solid var(--primary-accent);
+}
+
+.navBar li img{
+    display: inline-block;
+    margin: 5px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+.navBar li h1{
+    display: inline-block;
+    padding: 5px;
+}
+
+footer{
+font-size: 0.6rem;
+color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: space-between;
+position: fixed;
+bottom: 0;
+left: 0;
+border-radius: 5px 5px 5px 0;
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+transform: scale(80%);
+transform-origin: left bottom;
 }

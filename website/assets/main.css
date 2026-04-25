@@ -1,8 +1,11 @@
 :root{
     color-scheme: light dark;
+
     /*backgrounds*/
     --primary-bg: light-dark(white, #1e1d1d);
     --secondary-bg: light-dark(#e6e6e6, #252727);
+    --tertiary-bg: light-dark(#cccccc, #303131);
+
     /*text*/
     --text-color: light-dark(black, white);
     
@@ -10,12 +13,14 @@
     --catalina: #233c67;
     --st-louis: #ccdbee;
     --primary-accent: light-dark(var(--catalina),var(--st-louis));
+
     /*secondary accent*/
     --san-marino: #4470ad;
     --floral-blue: #99afd7;
     --secondary-accent: light-dark(var(--san-marino),var(--floral-blue));
+
     /*tertiary-accent*/
-    --soft-navy: #6888be;
+    --tertiary-accent: #6888be; /*"soft navy"*/
 }
 
 body{
@@ -29,6 +34,10 @@ p{
     font-family: "Inter";
 }
 
+a{
+    color: var(--secondary-accent)
+}
+
 .navBar{
     position: sticky;
     margin: 0;
@@ -39,8 +48,10 @@ p{
 }
 
 .navBar li{
-    margin: 0;
-    padding: 10px, 0;
+    border-right: 1px solid light-dark(white, grey);
+}
+
+.navBar li:has(h1){
     border-right: 5px solid var(--secondary-accent);
 }
 
@@ -54,12 +65,24 @@ p{
 
 .navBar li h1{
     display: inline-block;
-    margin: 2px 10px 2px 0;
+    margin: 2px 10px 2px 2px;
     vertical-align: middle;
 }
 
 .navBar li a{
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 20px 20px;
+}
 
+.navBar li a.active{
+    color: white;
+    background-color: var(--tertiary-accent);
+}
+
+.navBar li a:hover:not(.active){
+    background-color: var(--tertiary-bg);
 }
 
 footer{

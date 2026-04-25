@@ -1,0 +1,15 @@
+body{
+    background-color: #faf9f6;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+p{
+    font-family: "Inter";
+}
+
+.titleBar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    
+}

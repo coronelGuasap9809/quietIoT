@@ -1,26 +1,44 @@
 :root{
     color-scheme: light dark;
 
-    /* backgrounds */
+    --catalina: #233c67;
+    --st-louis: #ccdbee;
+    --san-marino: #4470ad;
+    --floral-blue: #99afd7;
+    --soft-navy: #6888be;
+
+
+    --text-color: light-dark(black, white);
+
     --primary-bg: light-dark(white, #1e1d1d);
     --secondary-bg: light-dark(#e6e6e6, #252727);
     --tertiary-bg: light-dark(#cccccc, #303131);
-
-    /* text */
-    --text-color: light-dark(black, white);
     
-    /* primary accent */
-    --catalina: #233c67;
-    --st-louis: #ccdbee;
     --primary-accent: light-dark(var(--catalina),var(--st-louis));
-
-    /* secondary accent */
-    --san-marino: #4470ad;
-    --floral-blue: #99afd7;
     --secondary-accent: light-dark(var(--san-marino),var(--floral-blue));
+    --tertiary-accent: var(--soft-navy);
+}
 
-    /* tertiary-accent */
-    --tertiary-accent: #6888be; /* "soft navy" */
+.lightmode{
+    --text-color: black;
+
+    --primary-bg: white;
+    --secondary-bg: #e6e6e6;
+    --tertiary-bg: #cccccc;
+
+    --primary-accent: var(--catalina);
+    --secondary-accent: var(--san-marino);
+}
+
+.darkmode{
+    --text-color: white;
+
+    --primary-bg: #1e1d1d;
+    --secondary-bg: #252727;
+    --tertiary-bg: #303131;
+
+    --primary-accent: var(--st-louis);
+    --secondary-accent: var(--floral-blue);
 }
 
 body{
@@ -28,6 +46,7 @@ body{
     background-color: var(--primary-bg);
     font-family: "Be Vietnam Pro", sans-serif;
     margin: 0;
+    transition: background-color 0.1s, color 0.1s;
 }
 
 p{
@@ -89,6 +108,7 @@ footer p{
     text-decoration: none;
     color: var(--text-color);
     padding: 20px 20px;
+    transition: background-color 0.3s;
 }
 
 .navBar li a.active{
@@ -144,20 +164,24 @@ footer p{
     width: auto;
 }
 
-.theme-selector li a{
+.theme-selector li button{
     display: block;
     text-decoration: none;
     padding: 5px 30px;
     margin: 2px;
     border-radius: 5px;
     color: var(--text-color);
+    border: 0;
+    font-size: 1em;
+    background-color: var(--secondary-bg);
+    transition: background-color 0.3s;
 }
 
-.theme-selector li a.active{
+.theme-selector li button.active{
     background-color: var(--tertiary-accent);
     color: white;
 }
 
-.theme-selector li a:hover:not(.active){
-    background-color: var(--tertiary-bg-hover, rgba(255,255,255,.12));
+.theme-selector li button:hover:not(.active){
+    background-color: var(--primary-bg);
 }

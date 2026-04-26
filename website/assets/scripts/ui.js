@@ -29,8 +29,17 @@ const enableAutomode = () => {
     localStorage.setItem("theme", "auto")
 }
 
+if (theme === "light") {
+    enableLightmode()
+} else if (theme === "dark") {
+    enableDarkmode()
+} else {
+    enableAutomode()
+}
+
 themeButtons.forEach(button => {
     button.addEventListener("click", (event) => {
+        theme = localStorage.getItem("theme")
         const id = event.target.id
         if (id === "light-btn") {
             enableLightmode()

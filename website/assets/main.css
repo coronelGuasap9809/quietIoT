@@ -175,11 +175,13 @@ footer p{
     font-size: 1em;
     background-color: var(--secondary-bg);
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .theme-selector li button.active{
     background-color: var(--tertiary-accent);
     color: white;
+    cursor: default;
 }
 
 .theme-selector li button:hover:not(.active){

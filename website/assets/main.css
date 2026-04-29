@@ -159,7 +159,7 @@ footer p{
     margin: 10px
 }
 
-.theme-selector{
+.selector{
     display: inline-flex;
     padding: 2px;
     background-color: var(--tertiary-bg);
@@ -169,7 +169,7 @@ footer p{
     width: auto;
 }
 
-.theme-selector li button{
+.selector li button{
     display: block;
     text-decoration: none;
     padding: 5px 30px;
@@ -183,12 +183,16 @@ footer p{
     cursor: pointer;
 }
 
-.theme-selector li button.active{
+.selector li button.active{
     background-color: var(--tertiary-accent);
     color: white;
     cursor: default;
 }
 
-.theme-selector li button:hover:not(.active){
+.selector li button:hover:not(.active){
     background-color: var(--primary-bg);
+}
+
+.disable-motion:hover{
+    transform: scale(100%)
 }

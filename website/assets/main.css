@@ -46,7 +46,7 @@ body{
     background-color: var(--primary-bg);
     font-family: "Be Vietnam Pro", sans-serif;
     margin: 0;
-    transition: background-color 0.1s, color 0.1s;
+    transition: background-color 0.1s, color 0.1s, ;
 }
 
 p{
@@ -129,10 +129,15 @@ footer p{
     background-color: var(--secondary-bg);
     padding: 5px;
     border-radius: 20px;
-    margin: 20px;
+    margin: 20px auto;
     max-width: 600px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.content:hover{
+    transform: scale(101%);
 }
 
 .heading{

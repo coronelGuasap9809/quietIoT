@@ -194,5 +194,5 @@ footer p{
 }
 
 .disable-motion:hover{
-    transform: scale(100%)
+    transform: scale(100%);
 }

@@ -71,8 +71,38 @@ footer p{
     font-size: 0.7rem;
 }
 
+form{
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+}
+
 input{
     display: block;
+    margin: 5px;
+    min-height: 20px;
+    background-color: var(--tertiary-bg);
+    border-width: 0 0 2px 0;
+    border-color: var(--primary-accent);
+    border-radius: 5px;
+}
+
+label{
+    margin-left: 10px;
+}
+
+button{
+    margin: 5px;
+    background-color: var(--tertiary-accent);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: auto;
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: var(--secondary-accent);
 }
 
 /* Navbar */
@@ -83,10 +113,6 @@ input{
     padding: 0;
     background-color: var(--secondary-bg);
     list-style-type: none;
-}
-
-.navBar li{
-    border-right: 1px solid light-dark(white, grey);
 }
 
 .navBar li:has(h1){
@@ -124,8 +150,8 @@ input{
     background-color: var(--tertiary-bg);
 }
 
-.navBar li:last-child {
-  border-right: none;
+.navBar li.right{
+    margin-left: auto;
 }
 
 /* content */
@@ -161,6 +187,10 @@ input{
 
 .content h3{
     margin: 10px
+}
+
+.login {
+    max-width: 350px;
 }
 
 .selector{

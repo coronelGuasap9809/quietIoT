@@ -16,15 +16,23 @@
             <ul class = "navBar">
                 <li><img src = "./assets/images/logo.png" alt = "Logo"><h1>QuietIoT</h1></li>
                 <li><a href = "index.html">Home</a></li>
-                <li><a class = "active" href = "dashboard.html">Dashboard</a></li>
+                <li><a href = "dashboard.html">Dashboard</a></li>
                 <li><a href = "settings.html">Settings</a></li>
+                <li class = "right"><a class = "active" href = "auth.html">Login</a></li>
             </ul>
         </header>
         <main>
-            <div class = "content">
+            <div class = "content login">
                 <div class = "heading">
                     <h2>Login</h2>
                 </div>
+                <form>
+                    <label for = email-input">Email</label>
+                    <input type = "email" name = "email-input">
+                    <label for = "password-input">Password</label>
+                    <input type = "password" name = "password-input">
+                    <button type = "submit">Log in &#8227</button>
+                </form>
             </div>
         </main>
         <footer>

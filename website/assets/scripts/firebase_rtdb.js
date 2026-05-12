@@ -26,11 +26,13 @@ import {getDatabase, set, get, update, remove, ref, child} from "https://www.gst
 const db = getDatabase();
 
 var timeInput = document.getElementById("time-input");
+var userInput = document.getElementById("user-input");
+var deviceInput = document.getElementById("device-input");
 var submitBtn = document.getElementById("test-button");
 var returnedText = document.getElementById("returned-text");
 
 function getData() {
-    returnedText.textContent = String(Math.random());
+  returnedText.textContent = String("users/" + userInput.value + "/devices/" + deviceInput.value + "/data/" + timeInput.value);
 }
 
 submitBtn.addEventListener("click", getData);

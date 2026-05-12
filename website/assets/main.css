@@ -58,17 +58,21 @@ a{
 }
 
 footer{
-position: fixed;
-bottom: 0;
-left: 0;
-border-radius: 0px 5px 0px 0;
-backdrop-filter: blur(6px);
--webkit-backdrop-filter: blur(6px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 0px 5px 0px 0;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 footer p{
     margin: 2px 2px 2px 10px;
     font-size: 0.7rem;
+}
+
+input{
+    display: block;
 }
 
 /* Navbar */

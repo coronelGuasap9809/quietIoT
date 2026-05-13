@@ -75,18 +75,20 @@ form{
     display: flex;
     margin: 5px;
     flex-direction: column;
+    border-radius: 5px;
 }
 
 input{
     display: block;
     margin: 5px;
-    min-height: 20px;
+    min-height: 1rem;
     background-color: var(--tertiary-bg);
     border-width: 0 0 2px 0;
     border-color: var(--primary-accent);
-    border-radius: 5px;
+    border-radius: inherit;
     color: var(--text-color);
     padding: 5px;
+    font-size: 0.75rem;
 }
 
 input[type=checkbox]{
@@ -103,10 +105,11 @@ button{
     margin: 5px;
     background-color: var(--tertiary-accent);
     border: none;
-    border-radius: 5px;
+    border-radius: inherit;
     padding: 5px;
     width: auto;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 button:hover{
@@ -200,6 +203,18 @@ button:hover{
 .login{
     max-width: 350px;
 }
+
+ .signup-prompt{
+    font-size: 0.75rem;
+ }
+
+ .signup-prompt a{
+    cursor: pointer;
+ }
+
+ .signup-prompt a:hover{
+    color: var(--primary-accent);
+ }
 
 .selector{
     display: inline-flex;

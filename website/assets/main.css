@@ -85,6 +85,14 @@ input{
     border-width: 0 0 2px 0;
     border-color: var(--primary-accent);
     border-radius: 5px;
+    color: var(--text-color);
+    padding: 5px;
+}
+
+input[type=checkbox]{
+    accent-color: var(--secondary-accent);
+    display: inline;
+    width: 1rem;
 }
 
 label{
@@ -189,7 +197,7 @@ button:hover{
     margin: 10px
 }
 
-.login {
+.login{
     max-width: 350px;
 }
 

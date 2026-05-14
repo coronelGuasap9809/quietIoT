@@ -5,6 +5,7 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log("Logged in as:", user.email);
     } else {
+        alert("User is signed out. Please log in.")
         console.log("User is signed out");
         window.location.href = "login.html";
     }

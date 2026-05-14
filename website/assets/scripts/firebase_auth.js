@@ -45,35 +45,29 @@ if (signupForm) {
 
         // Password match validation
         if (password !== confirmPassword) {
+            alert("Error: Passwords must match");
             console.error("Passwords do not match");
             return;
         }
 
         // Minimum length validation
         if (password.length < 8) {
+            alert(" Error: Password must be at least 8 characters");
             console.error("Password must be at least 8 characters");
             return;
         }
 
         try {
-            const userCredential =
-                await createUserWithEmailAndPassword(
-                    auth,
-                    email,
-                    password
-                );
+            const button = signupForm.querySelector("button")
+            button.textContent = "...";
+            button.disabled = true;
 
-            console.log(
-                "Account created:",
-                userCredential.user.email
-            );
-
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            window.location.href = "./index.html";
+            alert("Account created: " + userCredential.user.email);
+            console.log("Account created:", userCredential.user.email);
         } catch (error) {
-            console.error(
-                "Signup failed:",
-                error.code,
-                error.message
-            );
+            console.error("Signup failed:", error.code, error.message);
         }
     });
 }

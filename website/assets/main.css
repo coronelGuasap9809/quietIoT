@@ -57,6 +57,13 @@ a{
     color: var(--secondary-accent)
 }
 
+header{
+    position: sticky;
+    top: 0;
+    box-shadow: 0 10px 5px var(--primary-bg);
+    z-index: 20;
+}
+
 footer{
     position: fixed;
     bottom: 0;

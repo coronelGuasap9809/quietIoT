@@ -1,5 +1,5 @@
 import { auth } from "./firebase_init.js";
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerificaton, sendPasswordResetEmail, deleteUser, signOut } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, deleteUser, signOut } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 
 const loginForm = document.getElementById("login-form");
 const signupForm = document.getElementById("signup-form");
@@ -8,7 +8,7 @@ const logoutForm = document.getElementById("logout-form");
 if (loginForm) {
     loginForm.addEventListener("submit", async (event) => {
         event.preventDefault();
-
+        console.log("LOGIN SUBMITTED");
         const email = loginForm.querySelector("input[name='email-input']").value;
 
         const password = loginForm.querySelector("input[name='password-input']").value;
@@ -28,7 +28,7 @@ if (loginForm) {
 if (signupForm) {
     signupForm.addEventListener("submit", async (event) => {
         event.preventDefault();
-
+        console.log("SIGNUP SUBMITTED");
         const email = signupForm.querySelector("input[name='email-input']").value;
 
         const password = signupForm.querySelector("input[name='password-input']").value;
@@ -65,7 +65,7 @@ if (signupForm) {
     });
 }
 
-if (logoutForm) {
+/*if (logoutForm) {
     logoutForm.addEventListener("submit", async (event) => {
         event.preventDefault();
         try {
@@ -82,7 +82,7 @@ if (logoutForm) {
             console.error("Logout failed:", error.code, error.message);
         }
     });
-}
+}*/
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
